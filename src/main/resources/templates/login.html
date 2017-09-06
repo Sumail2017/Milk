@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{css/font-awesome.css}" />
+    <link rel="stylesheet" th:href="@{css/uwo.css}" />
+</head>
+<body>
+<div class="uwo-main">
+    <div class="uwo-container">
+        <form th:action="@{/login}" method="post">
+            <div class="uwo-group uwo-logo">
+                <i aria-hidden="true" class="fa fa-magnet"></i>
+            </div>
+
+            <div class="uwo-group uwo-none">
+                <label class="uwo-w-40 fa fa-envelope-o"></label>
+                <div class="uwo-ml-40">
+                    <div class="uwo-input">
+                        <input autocomplete="off" name="username" placeholder="手机号或邮箱" type="text"/>
+                    </div>
+                </div>
+            </div>
+
+            <div class="uwo-group uwo-none">
+                <label class="uwo-w-40 fa fa-lock"></label>
+                <div class="uwo-ml-40">
+                    <div class="uwo-input">
+                        <input name="password" placeholder="密码" type="password"/>
+                    </div>
+                </div>
+            </div>
+
+            <div class="uwo-group uwo-top10">
+                <button class="uwo-button uwo-full uwo-primary" type="submit">
+                    <span>授权</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>

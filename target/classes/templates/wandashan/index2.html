@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="zh-cn" xmlns:th="http://www.thymeleaf.org">
+<head>
+
+<meta charset="utf-8" />
+    <title>欢迎访问完达山乳品网站-特价乳品预订_鲜奶酸奶预订_网上乳品预订</title>
+    <meta name="description" content="特价乳品预订|特价鲜奶预订|网上乳品预订" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="stylesheet" href="../../../css/common.css"/>
+    <link rel="stylesheet" href="../../../lib/Swiper-3.3.1/swiper-3.3.1.min.css"/>
+    <link href="../../../css/style.css" rel="stylesheet" type="text/css"/>
+
+    <script type="text/javascript" src="../../../lib/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../../../lib/jquery.bpopup-0.8.0.min.js"></script>
+
+</head>
+
+<body>
+
+<div class="banner">
+<img src="../../../images/wandashan2.jpg" alt=""/>
+<a href="javascript:showrule();" class="rule-btn"><img src="../../../images/rule2.jpg" alt=""/></a>
+</div>
+<div class="g-site flexbox">
+    <div class="boxflex1 site-city">
+        <ul class="flexbox">
+            <li class="current" data="X">特惠组合</li>
+            <li class="" data="M">单一产品</li>
+        </ul>
+        <!--<div class="line"></div>-->
+    </div>
+</div>
+<div class="g-airline-w" style="margin-top: 2rem;">
+    <div class="g-airline box">
+        <div class="m-list">
+            <ul class="clearfix" style="width: 100%">
+                <li class="boxflex1" style="width: 95%">
+                    <div class="title"><span class="price">专业于</span>品质牛奶<span class="price">，完达山</span>儿童牛奶</div>
+                    <div class="clearfix text">
+                        <div class="text-price"><span class="price">最营养</span>的儿童组合奶</div>
+                        <div><a href="javascript:showOrder();">立即预定</a></div>
+                    </div>
+                </li>
+            </ul>
+            <ul class="clearfix">
+                <li class="boxflex1">
+                    <div class="title">红枣酸奶</div>
+                    <div class="clearfix text">
+                        <div class="text-price"><span class="price">￥4</span> 起</div>
+                        <div class="dishini-btn">星期一</div>
+                    </div>
+                </li>
+                <li class="boxflex1">
+                    <div class="title">儿童鲜奶</div>
+                    <div class="clearfix text">
+                        <div class="text-price"><span class="price">￥4</span> 起</div>
+                        <div class="dishini-btn">星期二</div>
+                    </div>
+                </li>
+                <li class="boxflex1">
+                    <div class="title">大果粒酸奶</div>
+                    <div class="clearfix text">
+                        <div class="text-price"><span class="price">￥4</span> 起</div>
+                        <div class="dishini-btn">星期三</div>
+                    </div>
+                </li>
+                <li class="boxflex1">
+                    <div class="title">儿童酸奶</div>
+                    <div class="clearfix text">
+                        <div class="text-price"><span class="price">￥4</span> 起</div>
+                        <div class="dishini-btn">星期四</div>
+                    </div>
+                </li>
+                <li class="boxflex1">
+                    <div class="title">草莓酸奶</div>
+                    <div class="clearfix text">
+                        <div class="text-price"><span class="price">￥4</span> 起</div>
+                        <div class="dishini-btn">星期五</div>
+                    </div>
+                </li>
+                <li class="boxflex1">
+                    <div class="title">原味酸奶</div>
+                    <div class="clearfix text">
+                        <div class="text-price"><span class="price">￥4</span> 起</div>
+                        <div class="dishini-btn">星期六</div>
+                    </div>
+                </li>
+                <li class="boxflex1">
+                    <div class="title">巴氏袋装酸奶</div>
+                    <div class="clearfix text">
+                        <div class="text-price"><span class="price">￥4</span> 起</div>
+                        <div class="dishini-btn">星期日</div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="m-rule" id="score">
+    <a href="javascript:;" class="rule-close tt-close"><img src="../../../images/close.png" alt=""/></a>
+    <div class="title">完达山·订奶积分规则</div>
+    <div class="content">
+        <ul>
+            <li><a href=""><strong>1.积分获取:</strong></a>
+                <ul style="color: #170d0d">
+                    <li>. 首次注册用户送10积分，首次订购送双
+                        倍积分，老用户推荐新用户订购成功，老用户获得20积分奖励</li>
+                    <li>. 订奶订满一个月送10积分</li>
+                    <li> . 一次订两个月送25积分</li>
+                    <li> . 一次订三个月送40积分</li>
+                    <li> . 一次订四个月送55积分</li>
+                    <li> . 一次订五个月送70积分</li>
+                    <li> . 一次订六个月送85积分</li>
+                    <li> . 一次订一年送200积分</li>
+                </ul>
+            </li>
+            <li><a href=""><strong>2.积分兑换:</strong></a>
+                <ul style="color: #170d0d">
+                    <li>. 120积分兑换20斤大米</li>
+                    <li>. 120积分兑换2升色拉油</li>
+                    <li>. 300积分兑换市区内家政清洁一次</li>
+                    <li>. 200积分兑换室内水电修理一次</li>
+                    <li>. 积分有效期为一年</li>
+                    <li>. 订奶热线：400-100-9117</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="rule-btn">
+        <a href="javascript:;" class="tt-close">好的，明白了～</a>
+    </div>
+</div>
+<div class="m-rule" id="order">
+    <a href="javascript:;" class="rule-close tt-close"><img src="../../../images/close.png" alt=""/></a>
+    <div class="title">完达山订单</div>
+    <div class="content">
+        <div class="col-sm-10">
+            <label for="city" class="col-sm-4">城市:</label>
+            <div class="col-sm-8">
+                <select name="city" id="city"></select>
+            </div>
+        </div>
+        <div class="col-sm-10">
+            <label for="milk" class="col-sm-4">品种:</label>
+            <div class="col-sm-8">
+                <select name="milk" id="milk"></select>
+            </div>
+        </div>
+        <div class="col-sm-10">
+            <label for="name" class="col-sm-4">姓名:</label>
+            <div class="col-sm-8">
+                <input type="text" name="name" id="name"/>
+            </div>
+        </div>
+        <div class="col-sm-10">
+            <label for="address" class="col-sm-4">地址:</label>
+            <div class="col-sm-8">
+                <input type="text" name="address" id="address"/>
+            </div>
+        </div>
+        <div class="col-sm-10">
+            <label for="phone" class="col-sm-4">电话:</label>
+            <div class="col-sm-8">
+                <input type="text" name="phone" id="phone"/>
+            </div>
+        </div>
+        <div class="col-sm-10">
+            <label for="date" class="col-sm-4">配送日期:</label>
+            <div class="col-sm-8">
+                <input type="text" name="date" id="date"/>
+            </div>
+        </div>
+    </div>
+    <div class="rule-btn">
+        <a href="javascript:;" class="tt-close">提交订单</a>
+    </div>
+</div>
+
+
+</body>
+<script type="text/javascript" src="../../../lib/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../../../lib/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../../lib/jquery.SuperSlide.2.1.1.js"></script>
+<script type="text/javascript" src="../../../lib/jquery.bpopup-0.8.0.min.js"></script>
+<script type="text/javascript" src="../../../jsRefund/common.js"></script>
+<script type="text/javascript" src="../../../js/activityCommon.js"></script>
+<script type="text/javascript" src="../../../js/turnToApp.js"></script>
+<script type="text/javascript" src="../../../js/where.js"></script>
+<script type="text/javascript" src="../../../js/index.js"></script>
+</html>
+

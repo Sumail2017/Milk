@@ -1,0 +1,8 @@
+com\uwo\milk\MilkApplication.class
+com\uwo\milk\configuration\MybatisConfiguration.class
+com\uwo\milk\service\UserService.class
+com\uwo\milk\configuration\DataSourceProperties.class
+com\uwo\milk\configuration\DataSourceConfiguration.class
+com\uwo\milk\pojo\User.class
+com\uwo\milk\mapper\UserMapper.class
+com\uwo\milk\controller\IndexController.class

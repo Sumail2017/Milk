@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+    <title>欢迎访问完达山乳品网站-特价乳品预订_鲜奶酸奶预订_网上乳品预订</title>
+    <meta name="description" content="特价乳品预订|特价鲜奶预订|网上乳品预订" />
+    <meta name="keywords" content="上海吉祥航空有限公司是著名民营企业均瑶集团的全资子公司。吉祥航空以全新飞机、精确定位、标准服务享誉业界。吉祥航空官方购票网站为旅客提供国内机票预订、电子客票销售、特价机票销售等多种优惠促销活动。" />
+    <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../lib/Swiper-3.3.1/swiper-3.3.1.min.css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+
+    <script type="text/javascript" src="../../lib/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../../lib/jquery.bpopup-0.8.0.min.js"></script>
+
+</head>
+
+<body>
+
+<div class="banner">
+<img src="./images/wandashan2.jpg" alt="">
+<a href="javascript:showrule();" class="rule-btn"><img src="./images/rule2.jpg" alt=""></a>
+</div>
+<div class="g-site flexbox">
+    <div class="boxflex1 site-city">
+        <label for="provinceChoose" class="col-sm-2 control-label">省份选择：</label>
+        <div class="col-sm-3">
+            <select name="province" id="provinceChoose" aria-controls="table"
+                    class="form-control input-sm">
+            </select>
+        </div>
+        <label for="cityChoose" class="col-sm-2 control-label">城市选择：</label>
+        <div class="col-sm-3">
+            <select name="city" id="cityChoose" aria-controls="table"
+                    class="form-control input-sm">
+            </select>
+        </div>
+        <label class="col-sm-2">
+            <div class="btn btn-success" id="query">
+                <span class="glyphicon glyphicon-search"></span>
+                <span>查询</span>
+            </div>
+        </label>
+    </div>
+    <div class="boxflex1 site-city">
+        <ul class="flexbox">
+            <li class="current" data="X">特惠组合</li>
+            <li class="" data="M">单一产品</li>
+        </ul>
+        <!--<div class="line"></div>-->
+    </div>
+</div>
+<div class="m-rule" style="background: url(./images/wandashan3.jpg);background-size: cover">
+    <a href="javascript:;" class="rule-close tt-close"><img src="./images/close.png" alt=""></a>
+    <div class="title">完达山·订奶积分规则</div>
+    <div class="content">
+        <ul>
+            <li><a href=""><strong>1.积分获取:</strong></a>
+            <p style="color: #170d0d">&nbsp. 首次注册用户送10积分，首次订购送双
+                &nbsp倍积分，老用户推荐新用户订购成功，老
+                &nbsp用户获得20积分奖励   <br>
+                &nbsp. 订奶订满一个月送10积分  <br>
+                &nbsp. 一次订两个月送25积分  <br>
+                &nbsp. 一次订三个月送40积分  <br>
+                &nbsp. 一次订四个月送55积分  <br>
+                &nbsp. 一次订五个月送70积分  <br>
+                &nbsp. 一次订六个月送85积分  <br>
+                &nbsp. 一次订一年送200积分</p>
+            </li>
+            <li><a href=""><strong>2.积分兑换:</strong></a>
+                <p>&nbsp.120积分兑换20斤大米<br>
+                    &nbsp.120积分兑换2升色拉油<br>
+                    &nbsp.300积分兑换市区内家政清洁一次<br>
+                    &nbsp.200积分兑换室内水电修理一次<br>
+                    &nbsp.积分有效期为一年<br>
+                    &nbsp.订奶热线：400-100-9117
+                </p>
+            </li>
+        </ul>
+    </div>
+    <div class="rule-btn">
+        <a href="javascript:;" class="tt-close">好的，明白了～</a>
+    </div>
+</div>
+
+
+</body>
+</html>
+<script type="text/javascript" src="../../lib/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../../lib/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../lib/jquery.SuperSlide.2.1.1.js"></script>
+<script type="text/javascript" src="../../lib/jquery.bpopup-0.8.0.min.js"></script>
+<script type="text/javascript" src="../../../jsRefund/common.js"></script>
+<script type="text/javascript" src="../../js/activityCommon.js"></script>
+<script type="text/javascript" src="../../js/turnToApp.js"></script>
+<script type="text/javascript" src="../../js/where.js"></script>
+<script>
+    var json;
+var timer = null;
+var aW = [];
+$(function(){
+    var $city = $('.site-city li');
+    $city.each(function(idx, item){
+        var w = $(item).outerWidth(true);
+        aW.push(w);
+    });
+
+    //绑定click事件
+    $(document).on("click",".dishini-btn",function(){
+        var data = $(this).data("info");
+        if(typeof data == 'object'){
+            data = JSON.stringify(data);
+        }
+        if(data == null || data == '' || data == undefined){
+            return false;
+        }
+        toApp.toDateSelect(data);
+    });
+
+    var top = $('.g-site').offset().top;
+    $(document).on('scroll', function(){
+        var cT = $(this).scrollTop();
+        if(cT>=(top+10)){
+            $('.g-site').addClass('fix');
+        } else {
+            $('.g-site').removeClass('fix');
+        }
+    });
+    var $city = $('.site-city li');
+    $city.each(function(idx, item){
+        var w = $(item).outerWidth(true);
+        aW.push(w);
+    })
+    $('.site-city li').click(function(){
+        var idx = $(this).index(),
+            left = 0;
+        for(var i=0; i<idx; i++){
+            left += aW[i];
+        }
+        left = left+(((aW[idx]-5)/2)-10);
+        $('.line').animate({'left': left}, 200);
+        $(this).addClass('current').siblings('li').removeClass('current');
+        if(json != null && json != undefined){
+            getAirLine($(this).attr("data"),json);
+        }
+        $('.chage-tab-box-item').hide().eq(idx).show();
+    });
+    $('.site-city li.current').trigger('click');
+
+    $('#backBtn').click(function(event) {
+        $('body').animate({'scrollTop': 0}, 500)
+    });
+    initPage();
+});
+function showrule(){
+    $('.m-rule').bPopup({
+        closeClass: 'tt-close'
+    });
+}
+function showHint(){
+    $('.coupon-hint').show();
+    timer = setTimeout(function(){
+        clearTimeout(timer);
+        $('.coupon-hint').hide();
+    }, 2000)
+}
+
+
+function initPage() {
+    var url = "../json/qixi";
+    Activity.getAirLineInfoFromJson(url, function (airLineJson) {
+        if (airLineJson) {
+            json = airLineJson;
+            getAirLine("X", json);
+        }
+    });
+}
+
+function drawPage(cityArray, city) {
+    var html = "<ul class='clearfix'>";
+    $.each(cityArray, function (index, item) {
+        html += "<li>" +
+                "<div class='title'>" + item.depCity + "&nbsp;-&nbsp;" + item.arrCity + "</div>" +
+                "<div class='clearfix text'>" +
+                "<div class='text-price'><span class='price'>￥" + item.price + "</span> 起</div>" +
+                "<div class='dishini-btn' data-info=\'" + JSON.stringify(item) + "\'><a href='javascript:void(0);'>立即预订</a></div>" +
+                "</div></li>";
+    });
+    html += "</ul>";
+    $(".m-list").html(html);
+}
+
+//从json中获取航线信息
+function getAirLine(city, airLineJson, isInt) {
+    var cityArray = new Array();
+    $.each(airLineJson, function (index, item) {
+        if (city) {
+            if (item.customTag == city ) {
+                cityArray.push(item);
+            }
+        }
+    });
+    if (cityArray) {
+        drawPage(cityArray, city);
+    } else {
+        return null;
+    }
+}
+</script>
