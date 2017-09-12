@@ -1,3 +1,4 @@
+com\uwo\milk\controller\ManageController.class
 com\uwo\milk\MilkApplication.class
 com\uwo\milk\configuration\MybatisConfiguration.class
 com\uwo\milk\service\UserService.class
